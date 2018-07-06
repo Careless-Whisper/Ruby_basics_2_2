@@ -65,6 +65,7 @@ end
     def underscore
       counter2 = 0
       @twitter.map {|i|
+
         if i.scan(/[_]/).length > 0
           counter2 += 1
         end
@@ -73,3 +74,11 @@ end
       puts "Il y'a #{counter2} handles contenant un underscore."
     end
       underscore
+
+    # Trie la liste de handle par ordre alphabétique
+
+    def sortAa
+      arrSort = @twitter.sort_by {|x| x.downcase }
+    puts "7. voici le tableau rangé par ordre alphabetique : \n #{arrSort}"
+    end
+    sortAa
